@@ -1,0 +1,222 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="515" Width="800">
+    <Window.Resources>
+        <Style TargetType="Paragraph">
+            <Setter Property="Foreground" Value="#FFE2C121"/>
+        </Style>
+
+        <Style TargetType="Paragraph" x:Key="pr">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="#FFE2C121"/>
+            <Setter Property="BorderThickness" Value="2,0,0,0"/>
+            <Setter Property="BorderBrush" Value="#FF2B2525"/>
+        </Style>
+
+        <Style TargetType="Paragraph" x:Key="prb">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="#FFE2C121"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentReader x:Name="doc">
+            <FlowDocument>
+                <FlowDocument.Background>
+                    <ImageBrush ImageSource="Data/1.jpg"/>
+                </FlowDocument.Background>
+                <Section>
+                    <Section.Background>
+                        <SolidColorBrush Color="#FF165CE6" Opacity="0.5"/>
+                    </Section.Background>
+
+                    <Paragraph TextAlignment="Center" FontSize="20" >
+                        <Hyperlink  NavigateUri="https://ru.wikipedia.org/wiki/%D0%94%D1%8E%D0%BD%D0%B0_(%D1%84%D0%B8%D0%BB%D1%8C%D0%BC,_2021)" Foreground="#FFF78D22" Cursor="Hand">Дюна (фильм, 2021)</Hyperlink>
+                    </Paragraph>
+
+                    <Paragraph >
+                        <Floater HorizontalAlignment="Right" Width="110">
+                            <BlockUIContainer>
+                                <Image Source="Data/Logo.jpg"/>
+                            </BlockUIContainer>
+                        </Floater>
+                        <Bold FontSize="18" Foreground="#FFDE5927">Сюжет.</Bold>
+                        Влиятельную семью Атрейдесов во главе с графом Лето отправляют на Арракис - следить за добычей спайса, самого важного вещества во Вселенной. Раньше эта планета принадлежала воинственным Харконненам, которые терроризировали местный народ фременов и оставили после себя только еле работающую технику. Они не намерены оставлять Арракис за Атрейдесами - уж слишком много денег приносят местные песчаные дюны - и готовят полномасштабную войну под предводительством барона Владимира Харконнена и Глоссу «Зверя» Раббана.
+                    </Paragraph>
+                    <Paragraph>
+                        В это время наследник дома Атрейдесов Пол пытается разобраться в себе. Его мать, воспитанница ордена Бене Гессерит, обучает сына силе «Голоса» (способности повелевать другими людьми) и убеждает, что тот - Муад’Диб, местный Мессия. В своих снах Пол видит странную девушку из племени фременов и образы из, кажется, не слишком весёлого будущего. А в свободное от галлюцинаций время учится сражаться под надзором воина Гурни Халлека и, как и все, готовится к неизбежному вторжению врага.
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold FontSize="18" Foreground="#FFDE5927">Источник.</Bold>
+                        «Хроники Дюны» — цикл научно-фантастических романов американского писателя Фрэнка Герберта. Основой для фильма является одноименный роман из серии.
+                    </Paragraph>
+                    <List MarkerStyle="Box" Foreground="#FFF9CF00" >
+                        <ListItem>
+                            <Paragraph>
+                                Дюна («Dune»)
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                Мессия Дюны («Dune Messiah»)
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                Дети Дюны («Children of Dune»)
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                Бог-Император Дюны («God-Emperor of Dune»)
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                Еретики Дюны («Heretics of Dune»)
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                Капитул Дюны («Chapterhouse: Dune»)
+                            </Paragraph>
+                        </ListItem>
+
+                    </List>
+                    <Paragraph>
+                        <Bold FontSize="18" Foreground="#FFDE5927">Некоторые персонажи.</Bold>
+                    </Paragraph>
+                    <Table>
+                        <Table.Columns>
+                            <TableColumn Width="1*"/>
+                            <TableColumn Width="1.5*"/>
+                            <TableColumn Width="2*"/>
+                        </Table.Columns>
+
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="Data/vh.jpg" Width="100" Height="120" HorizontalAlignment="Center"/>
+                                    </BlockUIContainer>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Style="{StaticResource prb}">
+                                        Барон Владимир Харконнен
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Style="{StaticResource pr}">
+                                        Глава дома Харконнен.
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="Data/pdv.jpg" Width="100" Height="120" HorizontalAlignment="Center"/>
+                                    </BlockUIContainer>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph  Style="{StaticResource prb}">
+                                        Питер Де Врис
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Style="{StaticResource pr}">
+                                        Ментат дома Харконнен.
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="Data/la.jpg" Width="100" Height="120" HorizontalAlignment="Center"/>
+                                    </BlockUIContainer>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Style="{StaticResource prb}">
+                                        Герцог Лето Атрейдес
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Style="{StaticResource pr}" >
+                                        Глава дома Атрейдес.
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="Data/lj.jpg" Width="100" Height="120" HorizontalAlignment="Center"/>
+                                    </BlockUIContainer>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Style="{StaticResource prb}">
+                                        Леди Джессика
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Style="{StaticResource pr}">
+                                        Наложница герцога Лето Атрейдеса.
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="Data/pa.jpg" Width="100" Height="120" HorizontalAlignment="Center"/>
+                                    </BlockUIContainer>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Style="{StaticResource prb}">
+                                        Пол Атрейдес
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Style="{StaticResource pr}">
+                                        Сын герцога Лето Атрейдеса и Леди Джессики.
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+
+                        </TableRowGroup>
+                    </Table>
+
+                </Section>
+
+            </FlowDocument>
+        </FlowDocumentReader>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Открыть" Width="100" Click="Button_Click_2"/>
+            <Button Content="Сохранить" Width="100" Click="Button_Click_1"/>
+            <Button Content="Очистить" Width="100" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
